@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <!-- Vue.js CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    </head>   
+    <body>
+
+    <div id="app">
+        <div>
+            <input
+                type="button"
+                v-bind:disabled="disabled"
+                v-bind:style="styleObject"
+                v-bind:value="buttonText"
+            />
+        </div>
+        <div>
+            <label>color</label>
+            <input type="color" v-model="color" />
+        </div>
+        <div>
+            <label>backgroundColor</label>
+            <input type="color" v-model="backgroundColor" />
+        </div>
+        <div>
+            <label>opacity</label>
+            <input type="range" v-model="opacity" min="0" max="1" step="0.1" />
+            {{ opacity }}
+        </div>
+        <div>
+            <label>borderRadius</label>
+            <input type="range" v-model="borderRadius" min="0" max="100" step="1" />
+            {{ borderRadius }}
+        </div>
+        <div>
+            <label>fontSize</label>
+            <input type="range" v-model="fontSize" min="10" max="40" step="1" />
+            {{ fontSize }}
+        </div>
+        <div>
+            <label>disabled</label>
+            <input type="checkbox" v-model="disabled" />
+        </div>
+        <div>
+            <label>button text</label>
+            <input type="text" v-model="buttonText" />
+        </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
